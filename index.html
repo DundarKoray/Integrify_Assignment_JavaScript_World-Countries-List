@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Country Finder</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet">
+    <!-- <embed src="./img/plevne.mp3" type="audio/mpeg" autostart="true" loop="true" hidden="true"  > -->
+</head>
+<body>
+    <div class="wrapper">
+            <audio class="background-music" src="./resources/Mysterious Ambient Background Music - The Rake.mp3" controls loop autoplay></audio>
+           
+
+            <audio class="audio">
+                <source class="mySoundClip" src="./img/Impact on Metal Sound Effect First Variation.mp3"></source>
+                Your browser isn't invited for super fun audio time.
+            </audio>
+        
+        <div class="overlay"></div>
+        <div class="background-video">
+                <video class="background-video__content" autoplay muted loop>
+                    <source src="./resources/4K UHD 25fps FREE Video Background HUD Sci Fi Futuristic Planet Earth.mp4" type="video/mp4"> 
+                    Your browser is not supported!
+                </video>
+            </div>
+    <section>
+
+        <div class="column head-section">
+            <h1>World Countries List</h1>
+            <p>Total Number of Countries 193</p>
+        </div>
+        <div class="column button-section">
+            <button class="btn search-by-initials selected">Starts with...</button>
+
+            <button class="btn search-by-any">Contains...</button>
+            
+            <div class="fontawesome-button"><i class="fas fa-sort-alpha-down"></i></div>
+            
+
+        </div>
+        <div class="column input-section">
+            <input class="search-box" type="text" placeholder="Search country...">
+        </div>
+        <div class="result-section">
+            
+        </div>
+    </section>
+    
+</div>
+    
+    <script src="./js/script.js"></script>
+    <!-- <script src="./js/countrySearch.js"></script> -->
+</body>
+</html>

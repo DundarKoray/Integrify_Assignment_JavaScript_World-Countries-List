@@ -1,0 +1,190 @@
+/*COLORS
+#07E6FF
+#2791BD
+#9B208D
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Cinzel', serif;
+   /* background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), 
+   url(../img/hero.jpg);  */
+   
+   /* height: 100vh; */
+   /* background-position: center; */
+   /* background-size: cover;  */
+   /* background-repeat: no-repeat; */
+   /* background: rgba(176, 142, 47, .2); */
+   /* background-attachment: fixed; */
+   /* padding: 50px; */
+  
+   
+}
+
+.wrapper {
+    height: auto;
+    padding: 150px;
+    width: 100%;
+    position: relative;
+}
+
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(155, 32, 141, 0.096);
+    z-index: -1;
+}
+
+.background-video__content{
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+h1{
+    color: white;
+    text-transform: uppercase;
+    font-size: 250%;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+p{
+    color: white;
+    font-size: 125%;
+}
+
+section{
+    
+    
+}
+
+
+.column{
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+
+button{
+    font-family: 'Cinzel', serif;
+    outline: none;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 80%;
+}
+
+.fontawesome-button{
+    
+    padding: 10px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    background: #DDDDDD;
+    display: inline-block;
+}
+
+.fontawesome-button:hover {
+    background: #07E6FF;
+    transition: all .21s;
+}
+
+
+button:hover{
+    background: #07E6FF;
+    transition: all .2s;    
+}
+
+.selected {
+    background: #9B208D;
+}
+
+input{
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding: 10px 25px;
+    border: solid 1px rgba(0,0,0,0.27);
+    outline: none; 
+    width: 100%;
+    text-align: center;
+    font-size: 120%;
+    font-family: 'Cinzel', serif;
+    color: #9B208D
+}
+
+input placeholder {
+    color: #9B208D;
+}
+
+.result-section,
+.input-section {
+    width: 50%;
+    margin:0 auto;
+}
+
+
+
+.country-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    /* border-radius: 20px; */
+    color: white;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 80%;
+    font-weight: 400;
+    width: 100%;
+    
+}
+
+.country-div:hover {
+    background: rgba(255, 0, 0, 0.288);
+    transition: all .2s;
+}
+
+.dark {
+    /* background:rgba(0, 0, 0, 0.6);  */
+    background: rgba(176, 142, 47, .9)
+}
+
+.light{
+    background: rgba(176, 142, 47, .6)
+    /* background:rgba(0, 0, 0, 0.4);  */
+}
+
+span {
+    /* background: rgba(0, 0, 0, 0.4); */
+
+}
+
+.background-music {
+    opacity: 0.2;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
