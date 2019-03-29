@@ -10,6 +10,7 @@
 }
 
 body{
+    
     font-family: 'Orbitron', serif;
    /* background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), 
    url(../img/hero.jpg);  */
@@ -20,9 +21,7 @@ body{
    /* background-repeat: no-repeat; */
    /* background: rgba(176, 142, 47, .2); */
    /* background-attachment: fixed; */
-   /* padding: 50px; */
-  
-   
+   /* padding: 50px; */   
 }
 
 .wrapper {
@@ -80,15 +79,12 @@ section{
     
 }
 
-
 .column{
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 25px;
 }
-
-
 
 button{
     font-family: 'Orbitron', serif;
@@ -120,11 +116,13 @@ button{
 
 button:hover{
     background: #07E6FF;
+    color: white;
     transition: all .2s;    
 }
 
 .selected {
     background: #9B208D;
+    color: white;
 }
 
 input{
@@ -147,26 +145,27 @@ input placeholder {
 
 .result-section,
 .input-section {
-    width: 50%;
+    width: 80%;
     margin:0 auto;
 }
 
-
-
-.country-div {
+.result-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 20px;
-    /* border-radius: 20px; */
-    color: white;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    font-size: 80%;
-    font-weight: 400;
-    width: 100%;
-    
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
+
+.country-wrapper {
+    padding: 15px;
+    margin: 5px;
+    font-size: 70%;
+    background: rgba(155, 32, 141, 0.308);
+    max-width: 350px;
+    min-width: 350px;
+
+}
+
+
 
 .country-div:hover {
     background: rgba(255, 0, 0, 0.288);
@@ -193,4 +192,8 @@ span {
     position: absolute;
     top: 10px;
     left: 10px;
+}
+
+img{
+    width: 20%;
 }
