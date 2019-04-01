@@ -4,7 +4,7 @@ const resultSection = document.querySelector('.result-section') // generated con
 const buttonAZ = document.querySelector('.sort-by-AZ')
 const subtitle = document.querySelector('.subtitle')
 subtitle.textContent=`Currently, there are  ${countriesObject.length} countries` 
-
+document.querySelector('.result-top-ten').style.display="none"
 const storedCountries = countriesObject
 let clickState = 0;
 
@@ -35,10 +35,32 @@ buttons.addEventListener('click', e => {
 
        sortByPopulation()
        // console.log(sortMaat(countriesObject, 'population'))
-    }
+    } 
 })
 
+document.querySelector('.most-populated').addEventListener('click', function(){
+    if (clickState === 0) {
+        document.querySelector('.result-top-ten').style.display='block'
+        clickState = 1
+    } else {
+        document.querySelector('.result-top-ten').style.display='none'
+        clickState = 0
+    }
 
+    
+})
+
+document.querySelector('.most-spoken').addEventListener('click', function(){
+    if (clickState === 0) {
+        document.querySelector('.result-top-ten').style.display='block'
+        clickState = 1
+    } else {
+        document.querySelector('.result-top-ten').style.display='none'
+        clickState = 0
+    }
+
+    
+})
 
 
 // FUNCTIONS // FUNCTIONS // FUNCTIONS // FUNCTIONS
@@ -58,23 +80,9 @@ function search (arr, keysearch) {
         
     })
 
-    //THIS MAKES THE COUNTRY LIST INVISIBLE
-    // if (searchBox.value ===''){
-    //     resultSection.style.display="none"
-    // }else {
-    //     resultSection.style.display="flex"
-    // }
-
    return searchResult
 
-    // if(buttonAZ.classList.contains('selected')){
-    //    return searchResult.reverse()
-    // } else {
-
-    //     return searchResult
-    // }
 }
-
 
 
 // generating divs
@@ -196,9 +204,164 @@ function sortByCapital () {
 }
 
 
-
-
 showCountries(search(countriesObject, searchBox.value))
+
+
+function mostSpokenLanguages (arr) {
+    let allLanguages = []
+    arr.forEach(element => {
+        allLanguages.push(element.languages.join(', '))
+        console.log(element)
+    })
+    console.log(allLanguages)
+    //Array(250) ["Pashto, Uzbek, Turkmen", "Swedish", "Albanian", "Arabic", "English, Samoan"...] 
+    
+    let joined = allLanguages.join(', ').split(', ')
+    console.log(joined)
+    //Array(368) ["Pashto", "Uzbek", "Turkmen", "Swedish", "Albanian", "Arabic", "English"]
+
+    let mySet = new Set(joined)
+    console.log(mySet)
+    //Set(112) {"Pashto", "Uzbek", "Turkmen", "Swedish", "Albanian", …} NO REPEATING
+    
+    let myMap = new Map()
+    for (let lang of mySet) {
+        let count = joined.filter(element => element === lang)
+        myMap.set(lang, count.length)
+                console.log(myMap)
+                
+                console.log(count)    
+            }
+            console.log(myMap)        
+
+}
+
+mostSpokenLanguages(countriesObject)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--TOP-10 MOST POPULATED COUNTRIES--
+const populationArray = storedCountries.sort(function(a, b) {
+  
+  return b.population - a.population;
+});
+
+console.log(populationArray)
+//this sorts countries from the most populated to the least populated
+
+const tenMostPopulated = populationArray.slice(0, 10);
+console.log(tenMostPopulated);
+//this slices top ten countries
+
+
+
+
+//--TOTAL POPULATION OF THE WORLD--
+let count = 0;
+countriesObject.forEach(element => {
+  count = count + element.population;
+});
+const worldPopulation = count;
+console.log(worldPopulation)
+
+
+//--CREATE CONTENT FOR TOP 10 THE MOST POPULATED COUNTRIES--
+const createPopulationContent = content => {
+    const { name, population } = content;
+    let width = (population / worldPopulation) * 100;
+    console.log(name, width);
+    let em =  `<div class="container">
+  <p class="toptenNames">${name}</p>
+<div class="population-bar" style="width: ${width}%">${population}</div>
+  </div>`;
+  console.log(em)
+  return em;
+};
+  
+
+
+//--SHOW CONTENT FOR TOP 10 THE MOST POPULATED COUNTRIES--
+const showCountriesPopulation = array => {
+    let content = "";
+    array.forEach((element) => {
+      content = content + createPopulationContent(element)
+    })
+    document.querySelector('.test').innerHTML = content;
+  };
+  
+  showCountriesPopulation(tenMostPopulated);
+//   subtitleForStats.textContent = "Ten most populated countries";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -215,11 +378,6 @@ showCountries(search(countriesObject, searchBox.value))
 //     }
 
 // console.log(sortMaat(countriesObject, 'population'))
-
-
-
-
-
 
 
 

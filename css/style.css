@@ -145,7 +145,7 @@ input placeholder {
 
 .result-section,
 .input-section {
-    width: 80%;
+    width: 90%;
     margin:0 auto;
 }
 
@@ -196,4 +196,42 @@ span {
 
 img{
     width: 20%;
+}
+
+.buttons {
+    display: flex;
+    justify-items: flex-start;
+    align-content: center;
+}
+
+.top-ten {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-ten button {
+    margin-bottom: 5px;
+    text-align: start;
+}
+
+.sorts {
+    display: flex;
+    align-items: center;
+}
+
+.result-top-ten {
+
+    background: rgba(155, 32, 141, 0.308);
+    width: 88.5%;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.test {
+    background: red;
+    margin-bottom: 20px;
+}
+
+.population-bar {
+    background: #07E6FF;
 }
