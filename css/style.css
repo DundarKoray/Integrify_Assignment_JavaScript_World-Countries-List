@@ -227,7 +227,7 @@ img{
 }
 
 .test {
-    background: red;
+    background: rgba(155, 32, 141, 0.308);
     padding: 5px;
     margin-bottom: 20px;
 }
