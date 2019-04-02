@@ -40,6 +40,7 @@ buttons.addEventListener('click', e => {
 
 document.querySelector('.most-populated').addEventListener('click', function(){
     if (clickState === 0) {
+        showCountriesPopulation(tenMostPopulated);
         document.querySelector('.result-top-ten').style.display='block'
         clickState = 1
     } else {
@@ -301,7 +302,7 @@ const showCountriesPopulation = array => {
     document.querySelector('.test').innerHTML = content;
   };
   
-  showCountriesPopulation(tenMostPopulated);
+  
 //   subtitleForStats.textContent = "Ten most populated countries";
 
 

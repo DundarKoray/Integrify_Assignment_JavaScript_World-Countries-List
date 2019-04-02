@@ -224,11 +224,11 @@ img{
     background: rgba(155, 32, 141, 0.308);
     width: 88.5%;
     margin: 0 auto;
-    height: 500px;
 }
 
 .test {
     background: red;
+    padding: 5px;
     margin-bottom: 20px;
 }
 
